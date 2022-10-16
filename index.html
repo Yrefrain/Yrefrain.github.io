@@ -157,6 +157,66 @@
     
     
     <article
+  id="post-title"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/10/16/title/"
+    >每日一题1</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/10/16/title/" class="article-date">
+  <time datetime="2022-10-16T13:36:50.000Z" itemprop="datePublished">2022-10-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="用户分组"><a href="#用户分组" class="headerlink" title="用户分组"></a>用户分组</h1><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/group-the-people-given-the-group-size-they-belong-to/">用户分组</a></p>
+<p><strong>题解：</strong></p>
+<blockquote>
+<p>哈希。</p>
+<p>元素下标存入的组一定和元素值一致，题目保证有效解。每个组从前开始存元素，当该组的size和元素值相同，就换下一个组存。</p>
+</blockquote>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">     vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">groupThePeople</span>(vector&lt;<span class="type">int</span>&gt;&amp; groupSizes)&#123;</span><br><span class="line">         unordered_map&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;&gt;hash;</span><br><span class="line">         vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;res;</span><br><span class="line">         <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; groupSizes.<span class="built_in">size</span>(); i++)&#123;</span><br><span class="line">             hash[groupSizes[i]].<span class="built_in">push_back</span>(i);</span><br><span class="line">             <span class="keyword">if</span>(hash[groupSizes[i]].<span class="built_in">size</span>() == groupSizes[i])&#123;</span><br><span class="line">                 res.<span class="built_in">push_back</span>(hash[groupSizes[i]]);</span><br><span class="line">                 hash[groupSizes[i]].<span class="built_in">clear</span>();</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">return</span> res;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+    </footer>
+  </div>
+
+   
+   
+  
+</article>
+
+    
+    <article
   id="post-hello-world"
   class="article article-type-post"
   itemscope
@@ -240,13 +300,6 @@
     <ul>
       <li>
         
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-        
       </li>
     </ul>
     <ul>
@@ -279,7 +332,7 @@
 <nav class="navbar">
   
   <div class="logo">
-    <a href="/"><img src="/images/ayer-side.svg" alt="Hexo"></a>
+    <a href="/"><img src="/images/ima.png" alt="Hexo"></a>
   </div>
   
   <ul class="nav nav-main">
@@ -468,9 +521,7 @@
 <!-- Katex -->
 
 <!-- busuanzi  -->
- 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
- 
+
 <!-- ClickLove -->
 
 <!-- ClickBoom1 -->
